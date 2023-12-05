@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1 = prompt("Enter left operand:" );
+        var num2 = prompt("Enter right operand: ");
+        var operator = prompt("Enter any operator '(+,-,/,*): ");
+
+
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+
+        if (isNaN(num1) || isNaN(num2)) {
+            alert("Invalid input. Please enter valid numbers.");
+        } else {
+            switch (operator) {
+                case '+': 
+                    var result = num1 + num2;
+                    alert(num1 + " + " + num2 + " = " + result);
+                break;
+                case '-': 
+                    var result = num1 - num2;
+                    alert(num1 + " - " + num2 + " = " + result);
+                break;
+                case '*': 
+                    var result = num1 * num2;    
+                    alert(num1 + " * " + num2 + " = " + result);
+                break;
+                case '/': 
+                    if (num2 === 0) {
+                    alert("Cannot divide by zero.");
+                    } else {
+                        var result = num1 / num2;
+                        alert(num1 + " / " + num2 + " = " + result);
+                    }
+                    break;
+                default:
+                alert("Invalid operator. Please enter +, -, /, or *.");
+            }
+        }
+    </script>
+</body>
+</html>
